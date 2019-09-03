@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Palco implements Magazzino {
 	private String nome;
-	private ArrayList<BevandaSpecifica> forniture = new ArrayList<BevandaSpecifica>();
+	private ArrayList<Prodotto> forniture = new ArrayList<Prodotto>();
 	
 	public Palco(String nome) {
 		super();
@@ -19,11 +19,11 @@ public class Palco implements Magazzino {
 		this.nome = nome;
 	}
 
-	public ArrayList<BevandaSpecifica> getForniture() {
+	public ArrayList<Prodotto> getForniture() {
 		return forniture;
 	}
 
-	public void setForniture(ArrayList<BevandaSpecifica> forniture) {
+	public void setForniture(ArrayList<Prodotto> forniture) {
 		this.forniture = forniture;
 	}
 

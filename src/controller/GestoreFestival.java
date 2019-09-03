@@ -1,6 +1,5 @@
 package controller;
 
-
 import java.util.ArrayList;
 import model.*;
 
@@ -9,6 +8,7 @@ public class GestoreFestival {
 	private ArrayList<Prodotto> storicoProdotti= new  ArrayList<Prodotto>();
 	private ArrayList<Prodotto> listaSpesa= new ArrayList<Prodotto>();
 	private ArrayList<Prodotto> prodottiAcquistati= new ArrayList<Prodotto>();
+	private ArrayList<Magazzino> zoneStoccaggio = new ArrayList<Magazzino>();
 
 	public void aggiungiProdottoStorico(String nomeProdotto, String puntoVendita) {
 		Prodotto prodotto = trova(nomeProdotto, storicoProdotti);
@@ -44,6 +44,10 @@ public class GestoreFestival {
 				listaSpesa.remove(prodottoDaAcq);
 			else
 				prodottoDaAcq.setQuantita(prodottoDaAcq.getQuantita()-quantita);
+	} 
+	
+	public void aggiungiPalco(String nome) {
+		zoneStoccaggio.add(new Palco(nome));
 	}
 
 	public void aggiungiPuntoVendita(String nomeProdotto, String Puntovendita){
@@ -54,6 +58,26 @@ public class GestoreFestival {
 			System.out.println("Punto vendita già inserito");
 		else
 			prodotto.getPuntiVendita().add(Puntovendita);			
+	}
+	
+	public void depositaAcquisto(Magazzino magazzino, ArrayList<Prodotto> prodottiImmagazzinati) {
+		magazzino.getForniture().addAll(prodottiImmagazzinati);		
+	}
+	
+	public void smistaProdotti(ArrayList<Prodotto> prodottiSmistati, Magazzino cedente, Magazzino ricevente){
+		for(int i=0; i<prodottiSmistati.size(); i++) {
+			Prodotto prodottoDaSmist=trova(prodottiSmistati.get(i).getNome(), cedente.getForniture());
+			if(prodottoDaSmist!=null && prodottiSmistati.get(i).getQuantita()<=prodottoDaSmist.getQuantita()) {
+				int nuovaQuantita= prodottiSmistati.get(i).getQuantita()-prodottoDaSmist.getQuantita();
+				if(nuovaQuantita==0)
+					cedente.getForniture().remove(prodottoDaSmist);
+				else
+					prodottoDaSmist.setQuantita(nuovaQuantita);
+				ricevente.getForniture().add(prodottoDaSmist);
+			}
+			else
+				System.out.println("il prodotto "+ prodottoDaSmist.getNome()+ "non è presente o non è in quenatità sufficiente nel magazzino: "+ cedente.getNome());
+		}
 	}
 
 	public void stampaProdotti(ArrayList<Prodotto> listaProdotti) {
