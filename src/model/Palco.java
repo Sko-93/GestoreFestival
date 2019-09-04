@@ -23,8 +23,8 @@ public class Palco implements Magazzino {
 		return prodottiImmagazzinati;
 	}
 
-	public void setForniture(ArrayList<Prodotto> forniture) {
-		this.prodottiImmagazzinati = forniture;
+	public void setForniture(ArrayList<Prodotto> prodottiImmagazzinati) {
+		this.prodottiImmagazzinati = prodottiImmagazzinati;
 	}
 
 	
