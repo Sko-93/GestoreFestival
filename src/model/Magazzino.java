@@ -8,7 +8,7 @@ public interface Magazzino {
 	
 	public void setNome(String nome);
 	
-	public ArrayList<Prodotto> getForniture();
+	public ArrayList<Prodotto> getProdottiImmagazzinati();
 	
-	public void setForniture(ArrayList<Prodotto> forniture);
+	public void setprodottiImmagazzinati(ArrayList<Prodotto> forniture);
 }
