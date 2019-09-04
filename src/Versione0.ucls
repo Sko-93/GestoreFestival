@@ -13,7 +13,7 @@
   </class>  
   <class id="2" language="java" name="model.BevandaGenerica" project="GestoreFestival" 
     file="/GestoreFestival/src/model/BevandaGenerica.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="699" y="656"/>    
+    <position height="-1" width="-1" x="654" y="658"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -22,7 +22,7 @@
   </class>  
   <class id="3" language="java" name="model.BevandaSpecifica" project="GestoreFestival" 
     file="/GestoreFestival/src/model/BevandaSpecifica.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1010" y="671"/>    
+    <position height="-1" width="-1" x="978" y="673"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -31,7 +31,7 @@
   </class>  
   <class id="4" language="java" name="model.Palco" project="GestoreFestival" 
     file="/GestoreFestival/src/model/Palco.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1300" y="304"/>    
+    <position height="-1" width="-1" x="1302" y="417"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -49,7 +49,7 @@
   </interface>  
   <interface id="6" language="java" name="model.Prodotto" project="GestoreFestival" 
     file="/GestoreFestival/src/model/Prodotto.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="855" y="315"/>    
+    <position height="-1" width="-1" x="807" y="352"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
