@@ -19,14 +19,12 @@ public class Palco implements Magazzino {
 		this.nome = nome;
 	}
 
-	public ArrayList<Prodotto> getForniture() {
+	public ArrayList<Prodotto> getProdottiImmagazzinati() {
 		return prodottiImmagazzinati;
 	}
 
-	public void setForniture(ArrayList<Prodotto> prodottiImmagazzinati) {
+	public void setprodottiImmagazzinati(ArrayList<Prodotto> prodottiImmagazzinati) {
 		this.prodottiImmagazzinati = prodottiImmagazzinati;
 	}
-
-	
 	
 }
