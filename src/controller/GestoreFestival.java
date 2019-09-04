@@ -46,6 +46,14 @@ public class GestoreFestival {
 				prodottoDaAcq.setQuantita(prodottoDaAcq.getQuantita()-quantita);
 	} 
 	
+	public double calcolaSpesaTotale(ArrayList<Prodotto> prodotti) {
+		double k=0;
+		for(int i=0; i<prodotti.size(); i++) {
+			k+= prodotti.get(i).getQuantita()*prodotti.get(i).getPrezzo();
+		}
+		return k;
+	}
+	
 	public void aggiungiPalco(String nome) {
 		zoneStoccaggio.add(new Palco(nome));
 	}
@@ -76,7 +84,7 @@ public class GestoreFestival {
 				ricevente.getProdottiImmagazzinati().add(prodottoDaSmist);
 			}
 			else
-				System.out.println("il prodotto "+ prodottoDaSmist.getNome()+ "non è presente o non è in quenatità sufficiente nel magazzino: "+ cedente.getNome());
+				System.out.println("il prodotto "+ prodottiSmistati.get(i).getNome()+ " non è presente o non è in quenatità sufficiente nel magazzino: "+ cedente.getNome());
 		}
 	}
 
@@ -110,13 +118,30 @@ public class GestoreFestival {
 		this.listaSpesa = listaSpesa;
 	}
 
+	public ArrayList<Magazzino> getZoneStoccaggio() {
+		return zoneStoccaggio;
+	}
+
+	public void setZoneStoccaggio(ArrayList<Magazzino> zoneStoccaggio) {
+		this.zoneStoccaggio = zoneStoccaggio;
+	}
+
 	public Prodotto trova(String nomeProdotto, ArrayList<Prodotto> arrayListProdotti) {
 		for(int i=0; i<arrayListProdotti.size(); i++) {
 			if(arrayListProdotti.get(i).getNome()== nomeProdotto)
 				return arrayListProdotti.get(i);
 		}
 		return null;
-	}		
+	}
+	
+	public Magazzino trovaMagazzino(String nomeMagazzino, ArrayList<Magazzino> arrayListMagazzino) {
+		for(int i=0; i<arrayListMagazzino.size(); i++) {
+			if(arrayListMagazzino.get(i).getNome()== nomeMagazzino)
+				return arrayListMagazzino.get(i);
+		}
+		return null;
+	}
+	
 }
 
 

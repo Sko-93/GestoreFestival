@@ -31,6 +31,26 @@ public class BevandaSpecifica implements Prodotto {
 	public void setPuntoVendita(ArrayList<String> puntiVendita) {
 		this.puntiVendita = puntiVendita;
 	}
+	
+	public int getQuantita() {
+		return quantita;
+	}
+
+	public void setQuantita(int quantita) {
+		this.quantita = quantita;
+	}
+
+	public double getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(double prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	public void setPuntiVendita(ArrayList<String> puntiVendita) {
+		this.puntiVendita = puntiVendita;
+	}
 
 	//se il primo elemento dell'ArrayList è la stringa vuota viene sostituita altrimenti viene inserito il nuovo punto vendita	
 	public void aggiungiPuntoVendita(String nuovoPunto) {
@@ -47,12 +67,5 @@ public class BevandaSpecifica implements Prodotto {
 		return prodottoStringa;
 	}
 
-	public int getQuantita() {
-		return quantita;
-	}
-
-	public void setQuantita(int quantita) {
-		this.quantita= quantita;
-	}
-
+	
 }

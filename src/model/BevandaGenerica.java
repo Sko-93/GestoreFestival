@@ -50,4 +50,8 @@ public class BevandaGenerica implements Prodotto {
 
 	public void setQuantita(int i) {}
 
+	public double getPrezzo() {
+		return 0;
+	}
+
 }

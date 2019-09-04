@@ -12,4 +12,6 @@ public interface Prodotto {
 
 	public void setQuantita(int i);
 	
+	public double getPrezzo();
+	
 }
