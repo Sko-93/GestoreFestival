@@ -61,19 +61,19 @@ public class GestoreFestival {
 	}
 	
 	public void depositaAcquisto(Magazzino magazzino, ArrayList<Prodotto> prodottiImmagazzinati) {
-		magazzino.getForniture().addAll(prodottiImmagazzinati);		
+		magazzino.getProdottiImmagazzinati().addAll(prodottiImmagazzinati);		
 	}
 	
 	public void smistaProdotti(ArrayList<Prodotto> prodottiSmistati, Magazzino cedente, Magazzino ricevente){
 		for(int i=0; i<prodottiSmistati.size(); i++) {
-			Prodotto prodottoDaSmist=trova(prodottiSmistati.get(i).getNome(), cedente.getForniture());
+			Prodotto prodottoDaSmist=trova(prodottiSmistati.get(i).getNome(), cedente.getProdottiImmagazzinati());
 			if(prodottoDaSmist!=null && prodottiSmistati.get(i).getQuantita()<=prodottoDaSmist.getQuantita()) {
 				int nuovaQuantita= prodottiSmistati.get(i).getQuantita()-prodottoDaSmist.getQuantita();
 				if(nuovaQuantita==0)
-					cedente.getForniture().remove(prodottoDaSmist);
+					cedente.getProdottiImmagazzinati().remove(prodottoDaSmist);
 				else
 					prodottoDaSmist.setQuantita(nuovaQuantita);
-				ricevente.getForniture().add(prodottoDaSmist);
+				ricevente.getProdottiImmagazzinati().add(prodottoDaSmist);
 			}
 			else
 				System.out.println("il prodotto "+ prodottoDaSmist.getNome()+ "non è presente o non è in quenatità sufficiente nel magazzino: "+ cedente.getNome());

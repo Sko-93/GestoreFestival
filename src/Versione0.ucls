@@ -70,45 +70,37 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="11">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="12" name="forniture"/>      
+    <bendpoint x="768" y="191"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="12" name="storicoProdotti"/>      
       <multiplicity id="13" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="14">    
-    <bendpoint x="768" y="191"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="15" name="storicoProdotti"/>      
-      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="17">    
+  <realization id="14">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="6"/>  
   </realization>  
-  <association id="18">    
+  <association id="15">    
     <bendpoint x="814" y="97"/>    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="19" name="zoneStoccaggio"/>      
-      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
+      <attribute id="16" name="zoneStoccaggio"/>      
+      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="21">    
+  <association id="18">    
     <bendpoint x="606" y="360"/>    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="22" name="listaSpesa"/>      
-      <multiplicity id="23" minimum="0" maximum="2147483647"/>    
+      <attribute id="19" name="listaSpesa"/>      
+      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="24">    
+  <realization id="21">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
