@@ -42,17 +42,26 @@ public class TestProdotti {
 		assertEquals(g1.trova("Fanta", g1.getStoricoProdotti())!=null, true);
 	}
 	
-	@Test
+	@Before
 	public void StampaListaProdotti(){
-		g1.registraAcquisto("Chinotto", "Metro", 15, 13.5);
+		g1.aggiungiProdottoListaSpesa("Chinotto", 15, 13.5);
+		g1.aggiungiProdottoListaSpesa("Fanta", 15, 3.5);
+		g1.aggiungiProdottoListaSpesa("Monster", 15, 13.5);
+		g1.stampa
 		g1.registraAcquisto("Chinotto", "Metro", 15, 13.5);
 		g1.registraAcquisto("Chinotto", "Ipercoop", 11, 12);
 		g1.registraAcquisto("Chinotto", "Metro", 15, 13.5);
 		g1.registraAcquisto("Chinotto", "Ipercoop", 11, 12);
 		g1.registraAcquisto("Fanta", "Metro", 15, 3.5);
+		g1.aggiungiProdottoListaSpesa("Chinotto", 15, 13.5);
+		g1.aggiungiProdottoListaSpesa("Fanta", 15, 3.5);
+		g1.aggiungiProdottoListaSpesa("Chinotto", 15, 13.5);
+		
 		g1.stampaProdotti(g1.getProdottiAcquistati());
 		System.out.print("\n");
 		g1.stampaProdotti(g1.getStoricoProdotti()); 
 	}
+	
+	
 
 }
