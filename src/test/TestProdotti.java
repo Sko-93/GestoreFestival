@@ -55,7 +55,7 @@ public class TestProdotti {
 		g1.registraAcquisto("Chinotto", "Metro", 15, 13.5);
 		g1.registraAcquisto("Chinotto", "Ipercoop", 11, 12);
 		g1.registraAcquisto("Fanta", "Metro", 15, 3.5);
-		System.out.print("-Lista spesa attuale\n");
+		System.out.print("-Lista spesa attuale:\n");
 		g1.stampaProdotti(g1.getListaSpesa());
 		System.out.print("\n-Lista prodotti acquistati:\n");
 		g1.stampaProdotti(g1.getProdottiAcquistati());
