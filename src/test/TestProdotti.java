@@ -77,7 +77,7 @@ public class TestProdotti {
 	public void depositaOggetti(){
 		g1.aggiungiPalco("Santa Giuliana");
 		g1.registraAcquisto("Chinotto", "Metro", 15, 2);
-		Magazzino magazzino= g1.trovaMagazzino("Santa Giuliana", g1.getZoneStoccaggio());
+		Magazzino magazzino=  g1.getZoneStoccaggio().get(g1.trovaMagazzino("Santa Giuliana", g1.getZoneStoccaggio()));
 		g1.depositaAcquisto(magazzino, g1.getProdottiAcquistati());
 		assertEquals(magazzino.getProdottiImmagazzinati().isEmpty(), false);
 	}
@@ -91,8 +91,8 @@ public class TestProdotti {
 		prodottiDaSmistare.add(new BevandaSpecifica("Chinotto", "Metro", 15, 2));
 		prodottiDaSmistare.add(new BevandaSpecifica("Monster", "Metro", 15, 2));
 		prodottiDaSmistare.add(new BevandaSpecifica("Redbull", "Metro", 15, 2));
-		Magazzino magazzino1= g1.trovaMagazzino("Santa Giuliana", g1.getZoneStoccaggio());
-		Magazzino magazzino2= g1.trovaMagazzino("Carducci", g1.getZoneStoccaggio());
+		Magazzino magazzino1= g1.getZoneStoccaggio().get(g1.trovaMagazzino("Santa Giuliana", g1.getZoneStoccaggio()));
+		Magazzino magazzino2= g1.getZoneStoccaggio().get(g1.trovaMagazzino("Carducci", g1.getZoneStoccaggio()));
 		g1.depositaAcquisto(magazzino1, g1.getProdottiAcquistati());
 		g1.smistaProdotti(prodottiDaSmistare, magazzino1, magazzino2);
 		assertEquals(magazzino2.getProdottiImmagazzinati().isEmpty(), false);

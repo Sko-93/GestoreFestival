@@ -127,22 +127,23 @@ public class GestoreFestival {
 		this.zoneStoccaggio = zoneStoccaggio;
 	}
 
-	public Prodotto trova(String nomeProdotto, ArrayList<Prodotto> arrayListProdotti) {
-		for(int i=0; i<arrayListProdotti.size(); i++) {
-			if(arrayListProdotti.get(i).getNome()== nomeProdotto)
-				return arrayListProdotti.get(i);
+	public Prodotto trova(String nome, ArrayList<Prodotto> listaOggetti) {
+		for(int i=0; i<listaOggetti.size(); i++) {
+			if(listaOggetti.get(i).getNome()== nome)
+				return listaOggetti.get(i);
 		}
 		return null;
 	}
 	
-	public Magazzino trovaMagazzino(String nomeMagazzino, ArrayList<Magazzino> arrayListMagazzino) {
+	public int trovaMagazzino(String nomeMagazzino, ArrayList<Magazzino> arrayListMagazzino) {
 		for(int i=0; i<arrayListMagazzino.size(); i++) {
 			if(arrayListMagazzino.get(i).getNome()== nomeMagazzino)
-				return arrayListMagazzino.get(i);
+				return i;
 		}
-		return null;
+		return -1;
 	}
 	
+
 }
 
 
