@@ -26,6 +26,7 @@ public class GestoreFestival {
 			prodotto.setQuantita(prodotto.getQuantita()+quantita);
 	}
 
+	//STATE da implementare
 	public void registraAcquisto(String nomeProdotto, String puntoVendita, int quantita, double prezzoUnitario) {
 		Prodotto prodottoStorico = trova(nomeProdotto, storicoProdotti);
 		Prodotto prodottoDaAcq= trova(nomeProdotto, listaSpesa);
