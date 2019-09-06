@@ -26,4 +26,13 @@ public class Ufficio implements Magazzino {
 	public void setprodottiImmagazzinati(ArrayList<Prodotto> forniture) {
 	}
 
+	public int getNumeroPersoneUfficio() {
+		return numeroPersoneUfficio;
+	}
+
+	public void setNumeroPersoneUfficio(int numeroPersoneUfficio) {
+		this.numeroPersoneUfficio = numeroPersoneUfficio;
+	}
+
+	
 }
